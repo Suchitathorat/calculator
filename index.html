@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <style> 
+
+        body{
+            background-color:white;
+            margin:   0  ;
+            padding:  0  ;
+           }
+
+           .cal-container{
+             background-color:rgb(77, 74, 74);
+             height: 510px;
+             width:410px;
+             display: block;
+             margin-left: auto;
+             margin-right: auto;
+             border-radius: 20px;
+             margin-top: 10px;
+            }
+
+           .brand{
+            text-align:right ;
+            padding:40px;
+            padding-top: 10px;
+            font-weight:bold;
+            color:white;
+           }
+
+            .cal-title{
+            text-align: center;
+            color:rgb(53, 68, 68);
+            }
+    
+        .input{
+             display:block;
+             margin-left: auto;
+             margin-right: auto;
+             width:355px;
+             font-size: 55px;
+             border-radius:9px ;
+             background-color:rgb(68, 224, 68) ;
+             margin-top:-50px;
+           }
+
+        .btn-container{
+            margin-top:20px ;
+            margin-left:10px;
+            margin-right:10px;
+            display:flex;
+            justify-content:center;
+            flex-wrap: wrap;
+           }
+
+        .btn{
+            font-size:40px;
+            height:55px;
+            width:55px;
+            margin:15px;
+            border-radius: 10px;
+            }
+
+        .btn:hover{
+            cursor:pointer;
+            box-shadow: 0 0 10px rgb(5, 206, 56);
+        }
+
+        .btn-color{
+            background-color:rgb(94, 88, 88);
+            color:white;
+        }
+        </style>
+    </head>
+    <body>
+     <h1 class="cal-title">CALCULATOR</h1> 
+
+     <div class="cal-container">
+        <p class="brand">SST</p>
+        <input class="input" class="text"/>
+
+       <div class="btn-container">
+        <button class="btn">1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
+        <button class="btn  btn-color ">+</button>
+
+        <button class="btn">4</button>
+        <button class="btn">5</button>
+        <button class="btn">6</button>
+        <button class="btn  btn-color  ">-</button>
+
+        <button class="btn">7</button>
+        <button class="btn">8</button>
+        <button class="btn">9</button>
+        <button class="btn  btn-color ">x</button>
+
+        <button class="btn  btn-color  ">.</button>
+        <button class="btn">0</button>
+        <button class="btn  btn-color  ">=</button>
+        <button class="btn  btn-color  ">/</button>
+       </div>
+     </div>
+ </body>
+</html>
