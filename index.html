@@ -34,7 +34,7 @@
             color:rgb(53, 68, 68);
             }
     
-        .input{
+        #input{
              display:block;
              margin-left: auto;
              margin-right: auto;
@@ -78,29 +78,45 @@
 
      <div class="cal-container">
         <p class="brand">SST</p>
-        <input class="input" class="text"/>
+        <input id="input" class="text"/>
 
        <div class="btn-container">
-        <button class="btn">1</button>
-        <button class="btn">2</button>
-        <button class="btn">3</button>
-        <button class="btn  btn-color ">+</button>
+        <button class="btn"  onclick="pressNumber(1)">1</button>
+        <button class="btn"  onclick="pressNumber(2)">2</button>
+        <button class="btn"  onclick="pressNumber(3)">3</button>
+        <button class="btn   btn-color "  onclick="pressNumber('+')">+</button>
 
-        <button class="btn">4</button>
-        <button class="btn">5</button>
-        <button class="btn">6</button>
-        <button class="btn  btn-color  ">-</button>
+        <button class="btn"  onclick="pressNumber(4)">4</button>
+        <button class="btn"  onclick="pressNumber(5)">5</button>
+        <button class="btn"  onclick="pressNumber(6)">6</button>
+        <button class="btn  btn-color  "  onclick="pressNumber('-')">-</button>
 
-        <button class="btn">7</button>
-        <button class="btn">8</button>
-        <button class="btn">9</button>
-        <button class="btn  btn-color ">x</button>
+        <button class="btn"  onclick="pressNumber(7)">7</button>
+        <button class="btn"  onclick="pressNumber(8)">8</button>
+        <button class="btn"  onclick="pressNumber(9)">9</button>
+        <button class="btn  btn-color "  onclick="pressNumber('*')">x</button>
 
-        <button class="btn  btn-color  ">.</button>
-        <button class="btn">0</button>
-        <button class="btn  btn-color  ">=</button>
-        <button class="btn  btn-color  ">/</button>
+        <button class="btn  btn-color  "  onclick="pressNumber('.')">.</button>
+        <button class="btn"  onclick="pressNumber(1)">0</button>
+        <button class="btn  btn-color  "  onclick="calculate()">=</button>
+        <button class="btn  btn-color  "  onclick="pressNumber('/')">/</button>
        </div>
      </div>
+
+
+     <script>
+       
+       function pressNumber(numberValue){
+        const screenElement = document.getElementById("input");
+        screenElement.value +=numberValue;
+       }
+
+
+       function calculate(){
+        const screenElement = document.getElementById("input");
+        screenElement.value = eval( screenElement.value);
+       }
+
+     </script>
  </body>
 </html>
